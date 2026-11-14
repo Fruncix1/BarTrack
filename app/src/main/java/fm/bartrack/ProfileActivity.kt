@@ -1,5 +1,6 @@
 package fm.bartrack
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -16,6 +17,18 @@ class ProfileActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btnOpenHistory = findViewById<Button>(R.id.btnOpenHistory)
+        val btnBack = findViewById<Button>(R.id.btnBackFromProfile)
+
+        btnOpenHistory.setOnClickListener {
+            startActivity(Intent(this, HistoryActivity::class.java))
+            finish()
+        }
+
+        btnBack.setOnClickListener {
+            finish()
         }
     }
 }
