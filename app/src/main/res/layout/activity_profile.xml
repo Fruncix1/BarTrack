@@ -19,13 +19,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Profil psa i kalkulator RER"
+            android:text="Profil psa i kalkulator kalorii"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etDogName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:hint="Podaj imię psa"
+            android:inputType="textPersonName|textCapWords"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileTitle" />
 
         <EditText
             android:id="@+id/etDogWeight"
@@ -38,7 +51,7 @@
             android:layout_marginHorizontal="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvProfileTitle" />
+            app:layout_constraintTop_toBottomOf="@id/etDogName" />
 
         <Button
             android:id="@+id/btnCalculateCalories"
@@ -57,12 +70,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Wynik: 0.0 kcal/dzień"
+            android:text="Zapotrzebowanie: 0.0 kcal/dzień"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnCalculateCalories" />
+
+        <TextView
+            android:id="@+id/tvDogSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Profil psa: nie podano imienia"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCalorieResult" />
 
         <Button
             android:id="@+id/btnOpenHistory"
